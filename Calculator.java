@@ -91,6 +91,13 @@ public class Calculator implements ActionListener{
 
 
     public void actionPerformed(ActionEvent e){
-
+        for(int i = 0; i<10; i++){
+            if(e.getSource() == numberButton[i]){
+               textField.setText(textField.getText().concat(String.valueOf(i)));
+            }
+        }
+        if(e.getSource() == decButton){
+            textField.setText(textField.getText().concat("."));
+        }
     }
 } 
